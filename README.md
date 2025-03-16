@@ -1,57 +1,85 @@
-Buscador de Motos
-Esta aplicación te permite buscar motos usando la API de Ninjas. Puedes filtrar por marca, modelo, año y tipo de moto, y ver los resultados en una tabla. También puedes descargar los resultados en formato Excel.
-Características principales
+# Motorcycle Search Engine
 
-Búsqueda de motos con filtros personalizables
-Interfaz gráfica sencilla y fácil de usar
-Exportación de resultados a Excel
-Visualización de datos en una tabla ordenada
+## Overview
+The Motorcycle Search Engine is a sleek application that leverages the Ninja API to help you discover motorcycles based on your preferences. Search by make, model, year, or type and view all matching results in a neatly organized table. This tool also offers one-click export functionality to save your findings in Excel format.
 
-Requisitos
-Para ejecutar esta aplicación necesitas:
+## Key Features
+- **Advanced Search Filters**: Find exactly what you're looking for with customizable parameters
+- **Intuitive User Interface**: Clean design for effortless navigation
+- **Excel Export**: Easily download and share your search results
+- **Organized Data Display**: View all motorcycle details in a sortable table format
 
-Python 3.8 o superior
-Las librerías especificadas en requirements.txt
+## Requirements
+To run this application, you'll need:
+- Python 3.8 or higher
+- Dependencies listed in `requirements.txt`
 
-Instalación
+## Installation Guide
 
-Clona este repositorio o descarga los archivos
-Crea un archivo .env en la raíz del proyecto con tu API key:
-CopyAPI_NINJA_KEY=tu_clave_api_aqui
+### Step 1: Get the Code
+```bash
+# Clone the repository
+git clone https://github.com/Alejo-IA/Api-motorcycle.git
 
-Instala las dependencias:
-Copypip install -r requirements.txt
+# Navigate to the project directory
+cd Api-motorcycle
+```
 
+### Step 2: Set Up Your API Key
+Create a `.env` file in the root directory with your Ninja API key:
+```
+API_NINJA_KEY=your_api_key_here
+```
 
-Cómo usar
+### Step 3: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-Ejecuta el programa:
-Copypython run.py
+## Usage Instructions
 
-En la ventana de la aplicación:
+### Starting the Application
+```bash
+python run.py
+```
 
-Escribe la marca, modelo, año o selecciona un tipo de moto
-Haz clic en "Buscar" para ver los resultados
-Usa "Limpiar" para borrar los filtros
-Haz clic en "Descargar Excel" para guardar los resultados
+### Using the Interface
+1. **Search**: Enter your desired motorcycle specifications:
+   - Make (e.g., Honda, Yamaha)
+   - Model (e.g., CBR, R1)
+   - Year (e.g., 2022)
+   - Type (e.g., Sport, Cruiser)
+2. **View Results**: Click "Search" to display matching motorcycles
+3. **Reset Filters**: Use "Clear" to start a new search
+4. **Export Data**: Click "Download Excel" to save results to the data folder
 
+## Project Structure
+```
+motorcycle-search/
+├── .env                 # API credentials (not included in repository)
+├── requirements.txt     # Required libraries
+├── run.py               # Application launcher
+├── src/                 # Source code
+│   ├── main.py          # Main entry point
+│   ├── config.py        # Configuration settings
+│   ├── ui/              # User interface components
+│   │   └── app.py       # Interface implementation
+│   └── api/             # API communication layer
+│       └── motorcycles.py  # Motorcycle API functions
+└── data/                # Excel export directory
+```
 
+## Developer Information
+This project is maintained by [Alejo-IA](https://github.com/Alejo-IA).
 
-Estructura del proyecto
-Copyapi_cars/
-├── .env                 # Mis credenciales (no incluido en repositorio)
-├── requirements.txt     # Librerías necesarias
-├── run.py               # Archivo para ejecutar la aplicación
-├── src/                 # Código fuente
-│   ├── main.py          # Punto de entrada principal
-│   ├── config.py        # Configuración
-│   ├── ui/              # Interfaz de usuario
-│   │   └── app.py       # Código de la interfaz
-│   └── api/             # Comunicación con APIs
-│       └── motorcycles.py  # Funciones para la API de motos
-└── data/                # Carpeta para guardar los Excel
-Notas importantes
+---
 
+## Troubleshooting
 
+If you encounter any issues:
+- Verify your API key is correctly set in the `.env` file
+- Ensure all dependencies are properly installed
+- Check your internet connection for API communication
 
-https://github.com/Alejo-IA
+## License
+This project is available for public use and modification.
